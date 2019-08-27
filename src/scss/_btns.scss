@@ -1,0 +1,50 @@
+.btn-green {
+    background-color: $green;
+    color: $white-color;
+    border-radius: 20px;
+    padding: 0.4rem 2.5rem;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn-blue {
+    background-color: $blue;
+    color: $white-color;
+    border-radius: 50%;
+    box-shadow: $box-shadow-blue-buttons;
+    padding: 0.5rem 0.6rem;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+.social {
+    display: none;
+    @include respond-to("xl") {
+        display: flex;
+        position: absolute;
+        transform: rotate(270deg);
+        top: 40vh;
+        left: -10rem;
+    }
+    @include respond-to("hd") {
+        left: -9rem;
+    }
+    @include respond-to("fhd") {
+        left: -7rem;
+    }
+    a {
+        padding: 0 1rem;
+        cursor: pointer;
+        color: $black-color;
+    }
+    .btn-green {
+        color: $white-color;
+    }
+}

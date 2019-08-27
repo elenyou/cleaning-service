@@ -1,0 +1,6 @@
+.navbar-text {
+    margin-right: 0.5rem;
+    @include respond-to("md") {
+        margin-right: 2rem;
+    }
+}

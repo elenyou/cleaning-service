@@ -1,0 +1,78 @@
+.home {
+    height: 100vh;
+    background-image: url('/images/main-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond-to("lg") {
+        padding: 2rem;
+    }
+    .main {
+        padding: 2rem 1rem;
+        position: relative;
+        @include respond-to("ssm") {
+            padding: 2rem;
+        }
+        @include respond-to("md") {
+            padding: 3rem 4rem; 
+        }
+        @include respond-to("xl") {
+            padding: 5rem 3rem; 
+        }
+        @include respond-to("xl") {
+            padding: 6rem 3rem; 
+        }
+        @include respond-to("hd") {
+            padding: 8rem 4rem; 
+        }
+        .hero {
+            flex-direction: column;
+            @include respond-to("md") {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            @include respond-to("xl") {
+                padding: 0 2rem;
+            }
+            &__text {
+                z-index: 2;
+                @include respond-to("md") {
+                    width: 60%;
+                }
+                @include respond-to("xl") {
+                    width: 50%;
+                }
+                @include respond-to("fhd") {
+                    width: 35%;
+                }
+            }
+            &__image {
+                width: 16rem;
+                margin-top: 1rem;
+                z-index: 1;
+                box-shadow: $box-shadow-images;
+                @include respond-to("ssm") {
+                    width: 19rem;
+                    margin-top: 1.5rem;
+                }
+                @include respond-to("md") {
+                    width: 30rem;
+                    margin: 0 0 0 -5rem;   
+                }  
+                @include respond-to("xl") {
+                    width: 45rem;
+                    margin: 0 0 0 -8rem;
+                }
+                @include respond-to("hd") {
+                    width: 50rem;
+                }
+                @include respond-to("fhd") {
+                    width: 60rem;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
