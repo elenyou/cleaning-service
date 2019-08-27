@@ -1,0 +1,43 @@
+// Variables
+$main-font: 'Montserrat', sans-serif;
+
+$white-color:#fff;
+$black-color: #333;
+$blue: #4CBAD8;
+$light-blue: #A0D8EB;
+$green: #70D775;
+$light-green: #B4ECDE;
+$yellow: #FFDF7F;
+$pink: #F7DFE7;
+
+$box-shadow-images: 0 2px 70px 0 rgba(161,161,161,0.50);
+$box-shadow-blue-buttons: 0 4px 14px 0 rgba(76,186,216,0.50);
+
+$transition: all 0.5s ease-in;
+
+
+//media queries
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'hd': 1440px,
+  'fhd': 1920px
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
