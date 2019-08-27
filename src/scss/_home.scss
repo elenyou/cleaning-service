@@ -1,78 +1,161 @@
 .home {
+  background-image: url("/images/main-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include respond-to("lg") {
+    padding: 2rem;
+  }
+  @include respond-to("xl") {
     height: 100vh;
-    background-image: url('/images/main-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    @include respond-to("lg") {
-        padding: 2rem;
+  }
+  .main {
+    padding: 2rem 1rem;
+    position: relative;
+    @include respond-to("ssm") {
+      padding: 2rem;
     }
-    .main {
-        padding: 2rem 1rem;
-        position: relative;
+    @include respond-to("md") {
+      padding: 3rem 4rem;
+    }
+    @include respond-to("lg") {
+      padding: 7.5rem 3rem;
+    }
+    @include respond-to("xl") {
+      padding: 6rem 3rem;
+    }
+    @include respond-to("hd") {
+      padding: 8rem 4rem;
+    }
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      @include respond-to("md") {
+        flex-direction: row;
+        justify-content: center;
+      }
+      @include respond-to("xl") {
+        padding: 0 2rem;
+      }
+      &__text {
+        z-index: 2;
+        @include respond-to("md") {
+          width: 60%;
+        }
+        @include respond-to("xl") {
+          width: 50%;
+        }
+        @include respond-to("fhd") {
+          width: 35%;
+        }
+      }
+      &__image {
+        width: 17.5rem;
+        margin-top: 1rem;
+        z-index: 1;
+        box-shadow: $box-shadow-images;
         @include respond-to("ssm") {
-            padding: 2rem;
+          width: 19rem;
+          margin-top: 1.5rem;
         }
         @include respond-to("md") {
-            padding: 3rem 4rem; 
+          width: 30rem;
+          margin: 0 0 0 -5rem;
         }
         @include respond-to("xl") {
-            padding: 5rem 3rem; 
-        }
-        @include respond-to("xl") {
-            padding: 6rem 3rem; 
+          width: 45rem;
+          margin: 0 0 0 -8rem;
         }
         @include respond-to("hd") {
-            padding: 8rem 4rem; 
+          width: 50rem;
         }
-        .hero {
-            flex-direction: column;
-            @include respond-to("md") {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-            }
-            @include respond-to("xl") {
-                padding: 0 2rem;
-            }
-            &__text {
-                z-index: 2;
-                @include respond-to("md") {
-                    width: 60%;
-                }
-                @include respond-to("xl") {
-                    width: 50%;
-                }
-                @include respond-to("fhd") {
-                    width: 35%;
-                }
-            }
-            &__image {
-                width: 16rem;
-                margin-top: 1rem;
-                z-index: 1;
-                box-shadow: $box-shadow-images;
-                @include respond-to("ssm") {
-                    width: 19rem;
-                    margin-top: 1.5rem;
-                }
-                @include respond-to("md") {
-                    width: 30rem;
-                    margin: 0 0 0 -5rem;   
-                }  
-                @include respond-to("xl") {
-                    width: 45rem;
-                    margin: 0 0 0 -8rem;
-                }
-                @include respond-to("hd") {
-                    width: 50rem;
-                }
-                @include respond-to("fhd") {
-                    width: 60rem;
-                }
-                img {
-                    width: 100%;
-                }
-            }
+        @include respond-to("fhd") {
+          width: 60rem;
         }
+        img {
+          width: 100%;
+        }
+      }
     }
+  }
+}
+
+.reasons {
+  padding: 1rem;
+  @include respond-to("ssm") {
+    padding: 1rem 2rem;
+  }
+  @include respond-to("md") {
+    padding: 2rem 4rem;
+  }
+  @include respond-to("lg") {
+    padding: 0 5rem;
+  }
+  @include respond-to("xl") {
+    padding: 0 7rem;
+  }
+  @include respond-to("hd") {
+    padding: 0 8rem;
+  }
+  p {
+    @include respond-to("xl") {
+      width: 60%;
+    }
+  }
+  .items {
+    display: grid;
+    @include respond-to("xl") {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    .item {
+      border-radius: 4px;
+      padding: 2rem;
+      margin: 0.5rem 0;
+      @include respond-to("xl") {
+        padding: 2rem 2.5rem 1rem 2.5rem;
+        margin: 0;
+      }
+      &__one {
+        background-color: $light-green;
+        @include respond-to("xl") {
+            grid-column: 1;
+            grid-row: 1;
+        }
+      }
+      &__two {
+        background-color: $light-blue;
+        @include respond-to("xl") {
+            grid-column: 2;
+            grid-row: 1/3;
+        }
+      }
+      &__three {
+        background-color: $yellow;
+        @include respond-to("xl") {
+            grid-column: 1;
+            grid-row: 2/4;
+        }
+      }
+      &__four {
+        background-color: $pink;
+        @include respond-to("xl") {
+            grid-column: 2;
+            grid-row: 3;
+        }
+      }
+      h3 {
+        text-transform: uppercase;
+      }
+      h3,
+      h5,
+      p,
+      a {
+        color: $white-color;
+        @include respond-to("xl") {
+            width: 100%;
+          }
+      }
+    }
+  }
 }
