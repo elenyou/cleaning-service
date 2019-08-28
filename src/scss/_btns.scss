@@ -7,6 +7,9 @@
     transition: $transition;
     &:hover {
         transform: scale(1.1);
+        color: $white-color;
+        text-decoration: none;
+        box-shadow:$box-shadow-blue-buttons;
     }
 }
 
@@ -19,7 +22,9 @@
     cursor: pointer;
     transition: $transition;
     &:hover {
-        transform: scale(1.1);
+        color: $white-color;
+        text-decoration: none;
+        box-shadow: $box-shadow-images;
     }
 }
 
@@ -34,15 +39,21 @@
         left: -10rem;
     }
     @include respond-to("hd") {
-        left: -9rem;
+        left: -15rem;
     }
     @include respond-to("fhd") {
-        left: -7rem;
+        left: -39%;
+    }
+    @include respond-to("sfhd") {
+        left: -67%;
     }
     a {
         padding: 0 1rem;
         cursor: pointer;
         color: $black-color;
+        &:hover {
+            text-decoration: none;
+        }
     }
     .btn-green {
         color: $white-color;

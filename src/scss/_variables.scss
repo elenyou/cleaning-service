@@ -24,7 +24,8 @@ $breakpoints: (
   'lg': 992px,
   'xl': 1200px,
   'hd': 1440px,
-  'fhd': 1920px
+  'fhd': 1920px,
+  'sfhd': 2560px,
 ) !default;
 
 @mixin respond-to($breakpoint) {
