@@ -45,15 +45,15 @@
         padding: 18rem 0; } }
     .home .container .hero {
       flex-direction: column;
-      align-items: center;
-      animation: 1.2s a-up ease-in-out forwards; }
+      align-items: center; }
       @media (min-width: 768px) {
         .home .container .hero {
           flex-direction: row;
           justify-content: center; } }
       @media (min-width: 1200px) {
         .home .container .hero {
-          padding: 0 2rem; } }
+          padding: 0 2rem;
+          animation: 1.2s a-up ease-in-out forwards; } }
       .home .container .hero__text {
         z-index: 2; }
         @media (min-width: 768px) {
@@ -343,34 +343,36 @@
   border-radius: 20px;
   padding: 0.4rem 2.5rem; }
 
-#reveal1,
-#reveal2,
-#reveal3,
-#reveal4,
-#reveal5 {
-  opacity: 0;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out; }
+@media (min-width: 1200px) {
+  #reveal1,
+  #reveal2,
+  #reveal3,
+  #reveal4,
+  #reveal5 {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; } }
 
-#reveal1.visible,
-#reveal2.visible,
-#reveal3.visible,
-#reveal4.visible,
-#reveal5.visible {
-  opacity: 1;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none; }
+@media (min-width: 1200px) {
+  #reveal1.visible,
+  #reveal2.visible,
+  #reveal3.visible,
+  #reveal4.visible,
+  #reveal5.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none; } }
 
 @keyframes a-up {
   0% {
