@@ -15,6 +15,10 @@ $box-shadow-blue-buttons: 0 4px 14px 0 rgba(76,186,216,0.50);
 
 $transition: all 0.5s ease-in;
 
+.box-image {
+  box-shadow: $box-shadow-images;
+  border-radius: 4px;
+}
 
 //media queries
 $breakpoints: (

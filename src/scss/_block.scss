@@ -1,0 +1,26 @@
+.block-item {
+    flex-direction: column;
+    padding-top: 2rem;
+    @include respond-to("lg") {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__text {
+        @include respond-to("lg") {
+            width: 50%;
+        }
+        @include respond-to("hd") {
+            width: 55%;
+        }
+    }
+    &__image {
+        padding-bottom: 2rem;
+        @include respond-to("xl") {
+            padding-bottom: 0;
+        }
+        img {
+            width: 100%;
+        }
+
+    }
+}

@@ -1,0 +1,37 @@
+.carousel-inner {
+    padding-bottom: 3rem;
+  }
+  .carousel-indicators > li {
+    border-radius: 40%;
+    width: 1rem;
+    height: 1rem;
+    background-color: $blue;
+  }
+  .carousel-item {
+    @include respond-to("lg") {
+      width: 60%;
+      left: 20%;
+  }
+    .quate {
+      line-height: 1.7;
+      &::before {
+        content: "\201D";
+        color: $blue;
+        font-weight: 700;
+        font-size: 1.5rem;
+        position: relative;
+        top: 2px;
+      }
+      &::after {
+        content: "\201E";
+        color: $blue;
+        font-weight: 700;
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 15px;
+      }
+    }
+    img {
+      width: 5rem;
+    }
+  }
