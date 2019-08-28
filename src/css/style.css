@@ -45,7 +45,8 @@
         padding: 18rem 0; } }
     .home .container .hero {
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      animation: 1.2s a-up ease-in-out forwards; }
       @media (min-width: 768px) {
         .home .container .hero {
           flex-direction: row;
@@ -105,13 +106,10 @@
       padding: 2rem; } }
   @media (min-width: 1200px) {
     .reasons {
-      padding: 0 4rem; } }
-  @media (min-width: 1440px) {
-    .reasons {
-      padding: 0 4rem; } }
+      padding: 0 4rem 4rem 4rem; } }
   @media (min-width: 1920px) {
     .reasons {
-      padding: 0 2rem; } }
+      padding: 0 2rem 4rem 2rem; } }
 
 .services {
   padding-top: 2rem; }
@@ -153,15 +151,18 @@
       padding: 3rem; } }
   @media (min-width: 1200px) {
     .info {
-      padding: 0 8rem; } }
+      padding: 4rem 8rem; } }
   @media (min-width: 1440px) {
     .info {
-      padding: 0 12rem; } }
+      padding: 4rem 12rem; } }
   @media (min-width: 2560px) {
     .info {
-      padding: 0 46rem; } }
+      padding: 4rem 46rem; } }
   .info .news {
     margin: 4rem 0; }
+    @media (min-width: 1200px) {
+      .info .news {
+        margin: 6rem 0; } }
 
 @media (min-width: 375px) {
   .about {
@@ -173,7 +174,7 @@
 
 @media (min-width: 1920px) {
   .about {
-    padding: 4rem 2rem; } }
+    padding: 4rem 1rem; } }
 
 .about .block-item__image {
   margin-top: 2rem; }
@@ -341,6 +342,43 @@
   background-color: #FFDF7F;
   border-radius: 20px;
   padding: 0.4rem 2.5rem; }
+
+#reveal1,
+#reveal2,
+#reveal3,
+#reveal4,
+#reveal5 {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+
+#reveal1.visible,
+#reveal2.visible,
+#reveal3.visible,
+#reveal4.visible,
+#reveal5.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none; }
+
+@keyframes a-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 300px, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 
 footer {
   background-image: url("/images/footer.png");
