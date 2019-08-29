@@ -301,6 +301,7 @@
   background-color: #4CBAD8;
   color: #fff;
   border-radius: 50%;
+  border: none;
   box-shadow: 0 4px 14px 0 rgba(76, 186, 216, 0.5);
   padding: 0.5rem 0.6rem;
   cursor: pointer;
